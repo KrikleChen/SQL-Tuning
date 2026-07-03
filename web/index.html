@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SQL 优化工具控制台</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Local Web Viewer</p>
+          <h1>SQL 优化工具控制台</h1>
+        </div>
+        <div class="run-meta" aria-label="当前批次">
+          <span>批次 RUN-20260703-01</span>
+          <strong>8 个样本</strong>
+        </div>
+      </header>
+
+      <section class="metrics" id="metrics" aria-label="执行摘要"></section>
+
+      <section class="workspace" aria-label="样本执行工作台">
+        <div class="results">
+          <div class="toolbar" aria-label="筛选工具">
+            <div class="tabs" id="filters" role="tablist" aria-label="结果筛选"></div>
+            <label class="search">
+              <span>搜索</span>
+              <input id="search" type="search" placeholder="SQL ID / 表名 / 原因">
+            </label>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>SQL ID</th>
+                  <th>来源</th>
+                  <th>决策</th>
+                  <th>耗时变化</th>
+                  <th>状态</th>
+                  <th>说明</th>
+                </tr>
+              </thead>
+              <tbody id="runs"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside class="details" id="details" aria-label="样本详情"></aside>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
